@@ -3,13 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
 
     <link rel="stylesheet" href="./assets/style/style.css" />
 
     <title>Coffe Shop</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
   </head>
   <body>
     <!-- header start Виталия -->
@@ -24,7 +31,7 @@
     <div class="carousel-container">
       <button
         class="carousel-button left"
-        href="#prev"
+        type="button"
         onclick="document.querySelector('.carousel-track').scrollLeft -=300;"
       >
         &lt;
@@ -87,11 +94,12 @@
         </div>
         <button
           class="carousel-button right"
-          href="#next"
+          type="button"
           onclick="document.querySelector('.carousel-track').scrollLeft +=300;"
         >
           &gt;
         </button>
+      </div>
     </div>
     <!-- carousel end Полина -->
     <!-- footer start Анастасия -->
