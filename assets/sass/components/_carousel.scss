@@ -1,0 +1,102 @@
+@use "../abstracts/mixin";
+@use "../abstracts/variables";
+
+.carousel-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: auto;
+  overflow: hidden;
+  background-color: #ddd;
+}
+.carousel-track {
+  display: flex;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  overflow: auto;
+  gap: variables.$gap;
+  padding: variables.$gap;
+  margin: variables.$gap;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.card {
+  flex: 0 0 calc(33.33% - 20px);
+  scroll-snap-align: start;
+  box-sizing: border-box;
+  padding: 20px;
+  text-align: center;
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  min-width: 180px;
+  min-height: 150px;
+
+  h3 {
+    margin: 10px 0;
+    font-size: variables.$card-h3-font;
+    font-family: variables.$family-font;
+  }
+  p {
+    font-size: variables.$card-p-font;
+    color: #555;
+    margin: 10px 0 20px;
+    font-family: variables.$family-font;
+  }
+  button {
+    padding: 10px 20px;
+    background-color: #004643;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: variables.$card-p-font;
+
+    &:hover {
+      background-color: #006d5b;
+    }
+  }
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 10;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+}
+
+.carousel-button.left {
+  left: 10px;
+}
+
+.carousel-button.right {
+  right: 10px;
+}
+@media screen and (max-width: 768px) {
+  .carousel-track {
+    flex-wrap: wrap;
+  }
+  .carousel-button {
+    display: none;
+  }
+}

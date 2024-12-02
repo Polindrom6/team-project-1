@@ -3,10 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="./assets/style/style.css" />
-    <link rel="stylesheet" href="assets/sass/app.css" />
-    <title>Document</title>
+
+    <title>Coffe Shop</title>
   </head>
   <body>
     <!-- header start Виталия -->
@@ -18,6 +21,78 @@
     <!-- main 3 section start Оля -->
     <!-- main 3 section end Оля -->
     <!-- carousel start Полина -->
+    <div class="carousel-container">
+      <button
+        class="carousel-button left"
+        href="#prev"
+        onclick="document.querySelector('.carousel-track').scrollLeft -=300;"
+      >
+        &lt;
+      </button>
+
+      <div class="carousel-track">
+        <div class="card">
+          <h3>Americano</h3>
+          <p>
+            An Americano has a clean, smooth taste with a moderate strength,
+            making it a versatile choice for coffee lovers who prefer less
+            intensity than espresso but more flavor than regular drip coffee.
+          </p>
+          <button>Order now</button>
+        </div>
+        <div class="card">
+          <h3>Latte</h3>
+          <p>
+            The name Latte (from Italian “milk”) speaks about the main
+            ingredient of the drink. It is recommended to take fat milk - at
+            least 3.2%. In addition to it, milk foam.
+          </p>
+          <button>Order now</button>
+        </div>
+        <div class="card">
+          <h3>Espresso</h3>
+          <p>
+            Espresso - black coffee made in a coffee machine or a special coffee
+            machine, where hot water is passed through pressed ground beans at a
+            pressure.
+          </p>
+          <button>Order now</button>
+        </div>
+        <div class="card">
+          <h3>Cappuccino</h3>
+          <p>
+            A cappuccino is a classic Italian coffee made with equal parts
+            espresso, steamed milk, and milk foam. It has a stronger coffee
+            flavor than a latte and is often topped with cocoa powder or
+            cinnamon for added flavor.
+          </p>
+          <button>Order now</button>
+        </div>
+        <div class="card">
+          <h3>Macchiato</h3>
+          <p>
+            An espresso macchiato consists of a shot of espresso "stained" or
+            "marked" with a small amount of milk foam. This drink highlights the
+            bold flavor of espresso with just a hint of creaminess.
+          </p>
+          <button>Order now</button>
+        </div>
+        <div class="card">
+          <h3>Mocha</h3>
+          <p>
+            A mocha is a chocolate-flavored coffee drink made with espresso,
+            steamed milk, and chocolate syrup or powder.
+          </p>
+          <button>Order now</button>
+        </div>
+        <button
+          class="carousel-button right"
+          href="#next"
+          onclick="document.querySelector('.carousel-track').scrollLeft +=300;"
+        >
+          &gt;
+        </button>
+    </div>
     <!-- carousel end Полина -->
     <!-- footer start Анастасия -->
     <!-- footer end Анастасия -->
