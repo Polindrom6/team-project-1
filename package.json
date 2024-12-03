@@ -1,0 +1,17 @@
+{
+  "name": "team-project-1",
+  "version": "1.0.0",
+  "description": "\"Coffee Shop\" — это одностраничное веб-приложение для демонстрации и заказа популярных кофейных напитков. Проект разработан в рамках учебного командного задания и ориентирован на создание удобного пользовательского интерфейса с адаптивным дизайном.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "lite-server",
+    "sass": "sass --watch assets/sass/app.scss"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  }
+}

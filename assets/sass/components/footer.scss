@@ -1,0 +1,130 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 7vw;
+  padding: 9vw 0 4vw 0px;
+
+  &__image {
+    position: relative;
+    background: url("../img/footer/map.png");
+
+    &-text {
+      position: absolute;
+      right: 0;
+      font-family: Cedarville Cursive;
+      font-size: 28px;
+      transform: rotate(90deg) translateY(-85%);
+
+      @media screen and (max-width: 1024px) {
+        display: none;
+      }
+    }
+  }
+
+  &__line {
+    padding-top: 18px;
+    @media screen and (max-width: 1024px) {
+      display: none;
+    }
+
+    &::before {
+      display: block;
+      content: "";
+      height: 2px;
+      width: 120px;
+      background-color: #444a4a;
+    }
+  }
+
+  &__inner {
+    font-size: 19px;
+    display: flex;
+    gap: 32px;
+
+    @media screen and (max-width: 1024px) {
+      justify-self: center;
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 27px;
+
+    @media screen and (max-width: 1024px) {
+      text-align: center;
+    }
+  }
+
+  &__addresses {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    font-family: Alegreya Sans;
+    font-weight: 400;
+
+    p {
+      margin: 0;
+
+      @media screen and (max-width: 1024px) {
+        &:nth-child(3),
+        &:nth-child(4) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__button {
+    display: none;
+    align-items: center;
+    gap: 15px;
+    background: #fff;
+    border: none;
+    box-shadow: 0px 4px 10px #00000024;
+    padding: 16px 18px;
+    border-radius: 5px;
+    font-family: "Josefin Sans";
+    font-weight: 700;
+    font-size: 16px;
+
+    @media screen and (max-width: 1024px) {
+      display: flex;
+    }
+
+    &::after {
+      display: block;
+      content: "";
+      background: url("../img/footer/arrow.svg") no-repeat;
+      height: 8px;
+      width: 25px;
+    }
+  }
+
+  &__copyright {
+    text-align: center;
+  }
+}
+.container {
+  max-width: 1083px;
+  margin: 0 auto;
+  width: 100%;
+
+  &-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 351px;
+    gap: 42px;
+
+    @media screen and (max-width: 1024px) {
+      grid-template-columns: 1fr;
+      justify-content: center;
+    }
+  }
+}
+
+.title {
+  font-family: Josefin Sans;
+  font-weight: 700;
+  font-size: 32px;
+}
