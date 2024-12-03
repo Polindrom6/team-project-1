@@ -1,0 +1,96 @@
+@use "../abstracts/variables";
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.5rem;
+    background-color: #fff;
+    font-family: variables.$font-family;
+    position: relative;
+    .header__logo {
+        position: absolute;
+        left: 60px;
+        top: 35px;
+        img {
+            width: variables.$logo-width-desktop;
+            height: variables.$logo-height-desktop;
+    }
+    }
+    .header__nav {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        position: absolute;
+            right: 60px;
+            top: 30px;
+    }
+    .header__menu {
+        display: flex;
+        gap: 30px;
+    }
+    .header__menu-item {
+        list-style: none;
+    }
+    .header__menu-link {
+        font-family: variables.$font-family;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 16px;
+        text-decoration: none;
+        color: variables.$black;
+        transition: font-weight 0.3s ease;
+        &:hover {
+            font-weight: 700;
+            }
+    }
+        .header__button {
+        background-color: #2D635E;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 16px;
+        color: variables.$white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        padding: 5px 15px;
+        transition: background-color 0.3s ease;
+        &:hover {
+            background-color: #006d5b;
+            font-weight: 700;
+        }
+    }
+    .header__burger {
+        display: none;
+        position: absolute;
+        top: 30px;
+        left: 18px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        span {
+            display: block;
+            width: variables.$burger-width;
+            height: 4px;
+            background-color: variables.$black;
+            margin: 5px 0;
+            transition: transform 0.3s ease;
+        }
+    }
+    @media screen and (max-width:768px){
+        .header__nav {
+            display: none;
+        }
+        .header__burger {
+            display: block;
+        }
+        .header__logo {
+            left: 88px;
+            top: 28px;
+            img {
+                width: variables.$logo-width-mobile;
+                height: variables.$logo-height-mobile;
+            }
+        }
+    }
+}
