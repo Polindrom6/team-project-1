@@ -1,0 +1,126 @@
+
+@use "../abstracts/variables";
+
+.section {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    box-sizing: border-box;
+padding: 150px 192px 50px 107px;
+
+.section__text {
+    flex: 0 1 50%;
+    width: 53%;
+font-family: variables.$font-family;
+}
+
+.section__text h2 {
+    color: rgb(0, 0, 0);
+font-size: 38px;
+font-weight: 700;
+line-height: 38px;
+letter-spacing: 0;
+text-align: left;
+}
+.section__text p {
+    min-width: 615px;
+    color: rgb(68, 74, 74);
+    font-family: 'Alegreya Sans', sans-serif;
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 36px;
+    letter-spacing: 0.1;
+    text-align: left;
+        }
+    
+.section__text button {
+width: 235px;
+height: 54px;
+left: 0;
+top: 0;
+
+    border-radius: 5px;
+background: variables.$primary-color;
+
+    font-family: variables.$font-family;
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+    font-size: 20px;
+line-height: 25px;
+letter-spacing: 0;
+text-align: center;
+
+cursor: pointer;
+&:hover {
+    background-color: variables.$secondary-color;
+}
+}
+
+.section__glass {
+    // flex: 0 1 50%;
+    width: 47%;
+    margin-left: 75px;
+}
+
+
+    .section__glass-all {
+        position: relative;
+        width: 100%
+
+    }
+    .section__glass-background {
+            position: absolute;
+            margin-left: 103px;
+            margin-top: 70px;
+            width: 410px;
+            height: 276px; 
+            background-color: rgb(227, 235, 231);
+            z-index: -1;
+        }
+
+    .section__glass-text {
+        position: absolute;
+       margin-top: 75px;
+       margin-left: 490px;
+          transform: rotate(-90deg) translateY(-85%);
+        color: rgb(0, 0, 0);
+        font-family: "Cedarville Cursive", serif;
+        font-weight: 400;
+        font-style: normal;
+    font-size: 28px;
+    line-height: 53px;
+    letter-spacing: 0;
+    text-align: right;
+    opacity: 0.75;
+     
+    }
+.section__glass-image{
+position: relative;
+margin-left: 175px;
+margin-top: 38px;
+width: 236px;
+height: 340px;
+background-image: url(/assets/img/main/3section.svg);
+background-repeat: no-repeat;
+z-index: 1;
+}
+}
+
+
+@media screen and (max-width: 768px) {
+    .section {
+      flex-wrap: wrap;
+      flex-direction: column-reverse;
+      
+    }
+    .section__text p {
+        flex-shrink: 1;
+    }
+    .section__text button {
+      display: none;
+    }
+    .section__glass-text {
+        display: none;
+    }
+  }
+
