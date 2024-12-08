@@ -1,0 +1,100 @@
+@use "../abstracts/variables";
+
+.first-section {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  font-family: variables.$font-family;
+}
+.left-side {
+  h4 {
+    font-family: variables.$h4-font;
+  }
+  h1 {
+    font-family: variables.$font-family, bold;
+  }
+  button {
+    padding: 10px 20px;
+    background-color: #004643;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: variables.$card-p-font;
+
+    &:hover {
+      background-color: #006d5b;
+    }
+  }
+}
+.right-side {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: flex-end;
+  width: 50%;
+  height: auto;
+  margin-top: 40px;
+
+  .arrow-block {
+    font-size: 1.5rem;
+    color: #2c514c;
+    font-family: "Arial", sans-serif;
+  }
+  .arrow {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  .image-block {
+    position: relative;
+    width: 30%;
+    height: auto;
+  }
+  .background {
+    position: absolute;
+    top: -30px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #e3ebe7;
+    z-index: 1;
+  }
+  img {
+    position: relative;
+    width: 100%;
+    height: auto;
+    z-index: 2;
+  }
+}
+.icons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s;
+
+    img {
+      width: 50%;
+      height: 50%;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  p {
+    writing-mode: vertical-rl;
+    text-orientation: sideways;
+    transform: rotate(180deg);
+    font-size: 0.9rem;
+    color: #2c514c;
+  }
+}

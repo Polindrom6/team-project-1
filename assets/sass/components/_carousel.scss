@@ -6,10 +6,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
-  height: auto;
   overflow: hidden;
   background-color: #ddd;
+  font-family: variables.$font-family;
 }
 .carousel-track {
   display: flex;
@@ -41,13 +40,11 @@
   h3 {
     margin: 10px 0;
     font-size: variables.$card-h3-font;
-    font-family: variables.$family-font;
   }
   p {
     font-size: variables.$card-p-font;
     color: #555;
     margin: 10px 0 20px;
-    font-family: variables.$family-font;
   }
   button {
     padding: 10px 20px;
